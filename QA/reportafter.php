@@ -249,8 +249,6 @@ include_once("../connect/connectionafter.php");
     });
     </script>
 
-
-
 </body>
 
 </html>
