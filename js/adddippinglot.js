@@ -8,8 +8,7 @@ let app = new Vue({
         myModal: false,
         hiddenId: null,
         actionButton: 'Insert',
-        dynamicTitle: 'Add data',
-   
+        dynamicTitle: 'Add data'
     },
     methods: {
         fetchAllDataR() {
@@ -102,7 +101,7 @@ let app = new Vue({
                     })
                 }
                
-        }
+            }
        },
        fetchDataR(id){
            axios.post('../control/actioneditdiplot.php',{
@@ -164,10 +163,19 @@ let app = new Vue({
                    id: id
                }).then(res => {
                    app.fetchAllData();
-                //    alert(res.data.message);
                });
            }
        },
+       deleteDataR(id){
+        if(confirm('Are you sure you want to delete')){
+            axios.post('../control/actioneditdiplot.php',{
+                actions: 'deleteR',
+                id: id
+            }).then(res => {
+                app.fetchAllData();
+            });
+        }
+    },
        getJulianDate(){
         var now = new Date();
         var start = new Date(now.getFullYear(), 0, 0);
@@ -177,7 +185,6 @@ let app = new Vue({
         this.julian = day.toString().padStart(3, '0');
         return this.julian;
     }
-   
   
        
    
@@ -185,12 +192,8 @@ let app = new Vue({
     created() {
         this.fetchAllDataR();
         this.fetchAllData();
-        // this.callproductlot();
-        // this.calltimeshift();
+   
        
-    },
-    mounted(){
-        // console.log(app.allData.length);
     },
     computed: {
       
@@ -225,14 +228,53 @@ let app = new Vue({
 
             const searchTerm = this.getJulianDate();
 
+
         return (
-            productLot.includes(searchTerm)      ||
+            productLot.includes(searchTerm)     || 
+            dippingLotL.includes(searchTerm)  
+  
+            
+               );
+            
+            });
+        },
+        filteredRowsLR()
+        {
+        return this.allData.filter(row => 
+            {
+            const productLot = row.ProductionLot.toLowerCase();
+            const dippingLotL = row.DippingLot_L.toLowerCase();
+         
+            const searchTerm = this.filtering.toLowerCase();
+
+        return (
+         
+            productLot.includes(searchTerm)    ||  
             dippingLotL.includes(searchTerm)      
             
                );
             
             });
+        },
+
+        filteredRowsRL()
+        {
+        return this.allDataR.filter(row => 
+            {
+                const productLot = row.ProductionLot.toLowerCase();
+                const dippingLotR = row.DippingLot_R.toLowerCase();
+                const searchTerm = this.filtering.toLowerCase();
+
+        return (
+         
+            productLot.includes(searchTerm)    ||  
+            dippingLotR.includes(searchTerm)      
+            
+               );
+            
+            });
         }
+
       
     }
    

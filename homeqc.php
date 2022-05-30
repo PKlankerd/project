@@ -35,61 +35,32 @@
         </div>
         <ul class="nav-links">
             <li>
+                
                 <a href="homeqc.php">
                     <i class='bx bx-home-heart'></i>
-                    <span class="link_name">Menu</span>
+                    <span class="link_name">Home</span>
                 </a>
+
                 <ul class="sub-menu blank">
                     <li><a class="link_name" href="homeqc.php">HOME</a></li>
                 </ul>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="batchnumber.php">Bat Number</a></li>
-                </ul>
+                
             </li>
-            <!-- <li>
-                <div class="iocn-link">
-                    <a href="#">
-                        <i class='bx bxs-report'></i>
-                        <span class="link_name">Report</span>
-                    </a>
-                    <i class='bx bxs-chevron-down arrow'></i>
-                </div>
-                <ul class="sub-menu">
-                    <li><a class="link_name" href="#">**Report**</a></li>
-                    <li><a href="reportdipL.php">Dipping Lot L</a></li>
-                    <li><a href="reportdipR.php">Dipping Lot R</a></li>
-                    <li><a href="productionlot.php">Production-Lot</a></li>
-                    <li><a href="qcbincard.php">QC Bincard</a></li>
-                    <li><a href="reportafterprocess.php">Chlorinator</a></li>
-                    <li><a href="qi.php">Inspection</a></li>
-                    <li><a href="Statisticaltest1.php">Statistical Test-1</a></li>
-                    <li><a href="Rework.php">Rework</a></li>
-                    <li><a href="Statisticalafter.php">Statistical After</a></li>
-                    <li><a href="bonding.php">Bonding</a></li>
-                    <li><a href="documentproduct.php">Product</a></li>
-                    <li><a href="documentmembers.php">Members</a></li>
-                </ul>
-            </li>
+
             <li>
                 <div class="iocn-link">
-                    <a href="#">
-                        <i class='bx bx-book-alt'></i>
-                        <span class="link_name">constant</span>
+                    <a href="batchnumber.php">
+                        <i class='bx bxs-report'></i>
+                        <span class="link_name">BATCH</span>
                     </a>
-                    <i class='bx bxs-chevron-down arrow'></i>
+                   
                 </div>
                 <ul class="sub-menu">
-                    <li><a class="link_name" href="#">**constant**</a></li>
-                    <li><a href="productadd.php">Product</a></li>
-                    <li><a href="membersadd.php">Members</a></li>
-                    <li><a href="glovecolor.php">Glovecolor</a></li>
-                    <li><a href="shell.php">Shell</a></li>
-                    <li><a href="size.php">Size</a></li>
-                    <li><a href="status.php">Status</a></li>
-                    
-
+                    <li><a class="link_name" href="as1/batchnumber.php">BATCH AS-1</a></li>
+                    <li><a class="link_name" href="as2/batchnumber.php">BATCH AS-2</a></li>
                 </ul>
             </li>
+
             <li>
                 <div class="iocn-link">
                     <a href="#">
@@ -99,16 +70,12 @@
                     <i class='bx bxs-chevron-down arrow'></i>
                 </div>
                 <ul class="sub-menu">
-                <li><a class="link_name" href="#">**Edit**</a></li>
-                    <li><a href="editqcbincard.php">QC Bincard</a></li>
-                    <li><a href="editqi.php">Qi</a></li>
-                    <li><a href="editStatisticaltest1.php">Statistical Test1</a></li>
-                    <li><a href="editRework.php">Rework</a></li>               
-                    <li><a href="editStatisticalafter.php">Statistical After</a></li>
-                    <li><a href="editbonding.php">Bonding</a></li>
+                <li><a class="link_name" href="QC/qcbincard.php">QC Bincard</a></li>
+                   
+                   
                     
                 </ul>
-            </li> -->
+            </li>
 
             <li>
                 <div class="profile-details">
@@ -146,7 +113,7 @@
                 </div>
 
                 
-                <a href="dipas1.php">
+                <a href="as1/dipas1.php">
 
                     <div class="col-md-6" style="margin-top:20rem; float: left; text-align: center;">
                         <button type="submit" class="btn btn-primary btn-md p-5"
@@ -154,7 +121,7 @@
                     </div>
                 </a>
 
-                <a href="dipas2.php">
+                <a href="as2/dipas2.php">
                     <div class="col-md-6" style="margin-top:20rem; float: right; text-align: center;">
                         <button type="submit" class="btn btn-primary btn-md p-5"
                             style="font-size: 5rem; color: #000">AS-2</button>
@@ -216,7 +183,8 @@
 
     showTime();
     </script>
-    <script src="../js/dropdown.js"></script>
+
+    <script src="js/dropdown.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
